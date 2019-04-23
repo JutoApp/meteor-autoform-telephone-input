@@ -18,7 +18,7 @@ Package.onUse(function(api) {
   api.versionsFrom('1.8.1');
   api.use([
     'ecmascript',
-    'templating@@1.3.2',
+    'templating@1.3.2',
     'aldeed:autoform@6.2.0'
   ],['client']);
   api.addAssets([
