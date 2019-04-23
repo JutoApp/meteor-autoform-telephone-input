@@ -19,7 +19,7 @@ Turns this:
 
 Into this:
 
-![image](http://placekitten.com/200/200)
+![image](https://raw.github.com/jackocnr/intl-tel-input/master/screenshots/vanilla.png)
 
 ### Installation
 
