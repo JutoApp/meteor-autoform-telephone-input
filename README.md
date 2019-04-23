@@ -3,8 +3,8 @@ via the NPM [intl-tel-input](https://www.npmjs.com/package/intl-tel-input) libra
 
 Turns this:
 
-```json
-{
+```js
+
   phone: {
     type: SimpleSchema.RegEx.Phone,
     label: "Phone",
@@ -14,7 +14,7 @@ Turns this:
       }
     }
   }
-}
+
 ```
 
 Into this:
