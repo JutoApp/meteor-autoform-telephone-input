@@ -1,3 +1,7 @@
 <template name="intlTelephoneInput">
+    <input type="tel" data-intl-tel-input="true" value="{{this.value}}" {{this.atts}}/>
+</template>
+
+<template name="intlTelephoneInput_bootstrap3">
     <input type="tel" data-intl-tel-input="true" value="{{this.value}}" {{attsPlusFormControlClass}}/>
 </template>

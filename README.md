@@ -34,3 +34,43 @@ Into this:
     ```
     meteor add juto:autoform-telephone-input
     ```
+
+3. (optional but recommended) Configure Simple-Schema validation.
+
+    In your schema JS (on the client):
+    
+    ```js
+    import SimpleSchema from 'simpl-schema';
+    import {Meteor} from 'meteor/meteor';
+    import {Tracker} from 'meteor/tracker';
+    let intlTelInput;
+    
+    if (Meteor.isClient) {
+      intlTelInput = require('intl-tel-input');
+    }
+
+    let schema = {
+      // ...
+      phone: {
+        type: SimpleSchema.RegEx.Phone,
+        label: "Company Contact Phone",
+        autoform: {
+          afFieldInput: {
+            type: "intl-tel",
+            autocomplete: "tel"
+          }
+        },
+        custom: function() {
+          if (Meteor.isClient && this.isSet && window.intlTelInputUtils) {
+            const valid = window.intlTelInputUtils.isValidNumber(this.value);
+            if (!valid) {
+              return SimpleSchema.ErrorTypes.VALUE_NOT_ALLOWED;
+            }
+          } 
+        }
+      }
+      // ...
+    };
+ 
+    window.MySchema = new SimpleSchema(schema, {tracker: Tracker});
+    ```

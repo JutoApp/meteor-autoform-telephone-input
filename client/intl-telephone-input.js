@@ -55,3 +55,7 @@ Template["intlTelephoneInput"].onRendered(function(){
 Template["intlTelephoneInput"].onCreated(function(){
   this.iti = new ReactiveVar(false);
 });
+
+Template["intlTelephoneInput_bootstrap3"].inheritsEventsFrom("intlTelephoneInput");
+Template["intlTelephoneInput_bootstrap3"].inheritsHelpersFrom("intlTelephoneInput");
+Template["intlTelephoneInput_bootstrap3"].inheritsHooksFrom("intlTelephoneInput");
