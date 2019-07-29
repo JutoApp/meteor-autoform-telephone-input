@@ -79,7 +79,7 @@ Into this:
 
 You can pass custom [options](https://github.com/jackocnr/intl-tel-input#options) through to the `intl-tel-input` package via the `intlTelInputOptions` property in the schema e.g. :
 
-```
+```json
   phone: {
     type: SimpleSchema.RegEx.Phone,
     label: "Company Contact Phone",
