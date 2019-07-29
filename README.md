@@ -74,3 +74,34 @@ Into this:
  
     window.MySchema = new SimpleSchema(schema, {tracker: Tracker});
     ```
+
+### Options
+
+You can pass custom [options](https://github.com/jackocnr/intl-tel-input#options) through to the `intl-tel-input` package via the `intlTelInputOptions` property in the schema e.g. :
+
+```
+  phone: {
+    type: SimpleSchema.RegEx.Phone,
+    label: "Company Contact Phone",
+    autoform: {
+      afFieldInput: {
+        type: "intl-tel",
+        autocomplete: "tel",
+        intlTelInputOptions: {
+          preferredCountries: ["us","au","gb"],
+          utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/15.0.2/js/utils.js"
+        }
+      }
+    },
+    custom: function() {
+      if (Meteor.isClient && this.isSet && window.intlTelInputUtils) {
+        const valid = window.intlTelInputUtils.isValidNumber(this.value);
+        if (!valid) {
+          return SimpleSchema.ErrorTypes.VALUE_NOT_ALLOWED;
+        }
+      } 
+    }
+  }
+```
+
+The default options are as above.

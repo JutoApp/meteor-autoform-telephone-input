@@ -1,6 +1,6 @@
 Package.describe({
   name: 'juto:autoform-telephone-input',
-  version: '1.0.1',
+  version: '1.0.2',
   // Brief, one-line summary of the package.
   summary: 'Autoform plugin for entering and validating international telephone numbers',
   // URL to the Git repository containing the source code for this package.

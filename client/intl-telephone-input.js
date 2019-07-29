@@ -26,11 +26,15 @@ AutoForm.addInputType("intl-tel", {
 //   }
 // });
 
-// Template["intlTelephoneInput"].helpers({
-  // exampleHelper(p1, p2, p3) {
-  //   return "example helper result: " + p1 + "," + p2 + "," + p3;
-  // }
-// });
+Template["intlTelephoneInput"].helpers({
+  attsPlusFormControlClass: function addFormControlAtts() {
+    var atts = {...this.atts};
+    // Add bootstrap class
+    atts = AutoForm.Utility.addClass(atts, "form-control");
+    delete atts.intlTelInputOptions;
+    return atts;
+  }
+});
 
 /*
 * called when an instance of this template is inserted into the DOM.
@@ -40,10 +44,14 @@ AutoForm.addInputType("intl-tel", {
 Template["intlTelephoneInput"].onRendered(function(){
   const tmpl = Template.instance();
   let input = tmpl.$("input[type=tel]")[0];
-  this.iti.set(intlTelInput(input, {
+
+  let data = this.data;
+  let opts = data.atts.intlTelInputOptions || {
     preferredCountries: ["us","au","gb"],
     utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/15.0.2/js/utils.js"
-  }));
+  };
+
+  this.iti.set(intlTelInput(input, opts));
 });
 
 /*
