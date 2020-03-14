@@ -67,3 +67,6 @@ Template["intlTelephoneInput"].onCreated(function(){
 Template["intlTelephoneInput_bootstrap3"].inheritsEventsFrom("intlTelephoneInput");
 Template["intlTelephoneInput_bootstrap3"].inheritsHelpersFrom("intlTelephoneInput");
 Template["intlTelephoneInput_bootstrap3"].inheritsHooksFrom("intlTelephoneInput");
+Template["intlTelephoneInput_materialize"].inheritsEventsFrom("intlTelephoneInput");
+Template["intlTelephoneInput_materialize"].inheritsHelpersFrom("intlTelephoneInput");
+Template["intlTelephoneInput_materialize"].inheritsHooksFrom("intlTelephoneInput");

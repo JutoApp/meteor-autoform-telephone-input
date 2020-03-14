@@ -1,6 +1,6 @@
 Package.describe({
   name: 'juto:autoform-telephone-input',
-  version: '1.0.2',
+  version: '1.0.3-autoform-5.8.1-materialize',
   // Brief, one-line summary of the package.
   summary: 'Autoform plugin for entering and validating international telephone numbers',
   // URL to the Git repository containing the source code for this package.
@@ -19,7 +19,7 @@ Package.onUse(function(api) {
   api.use([
     'ecmascript',
     'templating@1.3.2',
-    'aldeed:autoform@6.3.0',
+    'aldeed:autoform@5.8.1',
     'aldeed:template-extension@4.1.0'
   ],['client']);
   api.addAssets([
