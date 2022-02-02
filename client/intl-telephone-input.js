@@ -47,8 +47,8 @@ Template["intlTelephoneInput"].onRendered(function(){
 
   let data = this.data;
   let opts = data.atts.intlTelInputOptions || {
-    preferredCountries: ["us","au","gb"],
-    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/15.0.2/js/utils.js"
+    preferredCountries: ["au","gb","us"],
+    utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.15/js/utils.js"
   };
 
   this.iti.set(intlTelInput(input, opts));

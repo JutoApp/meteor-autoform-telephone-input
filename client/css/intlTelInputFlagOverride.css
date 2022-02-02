@@ -1,5 +1,5 @@
-.iti-flag {background-image: url("/packages/juto_autoform-telephone-input/public/flags.png");}
+.iti__flag {background-image: url("/packages/juto_autoform-telephone-input/public/flags.png");}
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .iti-flag {background-image: url("/packages/juto_autoform-telephone-input/public/flags@2x.png");}
+    .iti__flag {background-image: url("/packages/juto_autoform-telephone-input/public/flags@2x.png");}
 }
