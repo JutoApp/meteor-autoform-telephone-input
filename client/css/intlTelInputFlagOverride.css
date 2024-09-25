@@ -1,5 +1,6 @@
-.iti__flag {background-image: url("/packages/juto_autoform-telephone-input/public/flags.png");}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    .iti__flag {background-image: url("/packages/juto_autoform-telephone-input/public/flags@2x.png");}
+.iti {
+  --iti-path-flags-1x: url("/packages/juto_autoform-telephone-input/public/flags.webp");
+  --iti-path-flags-2x: url("/packages/juto_autoform-telephone-input/public/flags@2x.webp");
+  --iti-path-globe-1x: url("/packages/juto_autoform-telephone-input/public/globe.webp");
+  --iti-path-globe-2x: url("/packages/juto_autoform-telephone-input/public/globe@2x.webp");
 }
