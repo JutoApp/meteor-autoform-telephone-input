@@ -2,8 +2,9 @@ import { Template } from "meteor/templating";
 import { ReactiveVar } from "meteor/reactive-var";
 
 import intlTelInput from "intl-tel-input/build/js/intlTelInputWithUtils.js";
+const AutoForm = Package['aldeed:autoform']?.AutoForm;
 
-AutoForm.addInputType("intl-tel", {
+AutoForm?.addInputType("intl-tel", {
   template: "intlTelephoneInput",
   // valueIn: function(val, attrs){
   //   return val;
@@ -34,7 +35,7 @@ Template["intlTelephoneInput"].helpers({
   attsPlusFormControlClass: function addFormControlAtts() {
     var atts = { ...this.atts };
     // Add bootstrap class
-    atts = AutoForm.Utility.addClass(atts, "form-control");
+    atts = AutoForm?.Utility.addClass(atts, "form-control");
     delete atts.intlTelInputOptions;
     return atts;
   },
