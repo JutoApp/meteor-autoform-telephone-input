@@ -26,7 +26,7 @@ Into this:
 1. Install the `intl-tel-input` library.
 
     ```
-    meteor npm install intl-tel-input@15.0.2 --save
+    meteor npm install intl-tel-input@24.5.0 --save
     ```
 
 2. Install this library.
@@ -87,11 +87,11 @@ You can pass custom [options](https://github.com/jackocnr/intl-tel-input#options
       afFieldInput: {
         type: "intl-tel",
         autocomplete: "tel",
-        intlTelInputOptions: {
-          preferredCountries: ["us","au","gb"],
-          utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/15.0.2/js/utils.js"
+        onlyCountries: ["au", "gb", "us"],
+        initialCountry: "au",
+        utilsScript:
+          "https://cdn.jsdelivr.net/npm/intl-tel-input@24.5.0/build/js/utils.js",
         }
-      }
     },
     custom: function() {
       if (Meteor.isClient && this.isSet && window.intlTelInputUtils) {
