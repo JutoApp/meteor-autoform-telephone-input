@@ -19,7 +19,7 @@ Turns this:
 
 Into this:
 
-![image](https://raw.github.com/jackocnr/intl-tel-input/master/screenshots/vanilla.png)
+![image](https://raw.github.com/jackocnr/intl-tel-input/master/screenshots/vanilla2.png)
 
 ### Installation
 
