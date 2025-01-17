@@ -11,11 +11,11 @@ Package.describe({
 });
 
 Npm.depends({
-  "intl-tel-input" : "24.5.0"
+  "intl-tel-input" : "25.2.1"
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('2.12');
+  api.versionsFrom('2.13.3');
   api.use([
     'ecmascript',
     'templating@1.4.2',
